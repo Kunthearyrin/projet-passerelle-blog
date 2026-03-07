@@ -1,0 +1,55 @@
+// Import des fichiers communs
+@import "variables";
+@import "mixins";
+@import "styles";
+
+// Styles spécifiques aux pages admin
+.admin-navbar {
+  background-color: darken($color-mocha, 15%);
+}
+
+.admin-card {
+  @include shadow(medium);
+  border-radius: 10px;
+}
+
+.btn-admin-primary {
+  background-color: $color-mocha;
+  color: $color-white;
+  @include transition;
+
+  &:hover {
+    background-color: darken($color-mocha, 10%);
+  }
+}
+
+.navbar-admin {
+  background-color: $color-mocha;
+}
+
+// Structure générale avec Flexbox (pour que le footer reste bien en bas de la page malgré le tableau et le peu de contenu de la page)
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+//Admin - Création d'article
+
+.navbar-pink {
+  background-color: $color-pink;
+}

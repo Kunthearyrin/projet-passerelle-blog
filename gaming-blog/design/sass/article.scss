@@ -1,0 +1,33 @@
+// Import des fichiers communs
+@import "variables";
+@import "mixins";
+@import "styles";
+@import "header";
+@import "footer";
+
+//Article
+
+.article-header {
+  background: linear-gradient(135deg, #f9d7e1 0%, #8e756e 100%);
+  padding: 60px 0;
+  margin-bottom: 40px;
+}
+
+.article-thumbnail-large {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.article-rating {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+.article-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}

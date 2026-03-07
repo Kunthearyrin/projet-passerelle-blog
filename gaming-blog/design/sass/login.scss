@@ -1,0 +1,140 @@
+// Import des fichiers communs
+@import "variables";
+@import "mixins";
+@import "styles";
+
+//Log in
+
+#login_body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9d7e1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+}
+
+.login-box {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  color: $color-text-dark;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*Form*/
+
+.form-label {
+  color: $color-text-dark;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  border: 2px solid #d4c1bb;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 15px;
+  color: $color-text-dark;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #8e756e;
+  box-shadow: 0 0 0 0.2rem rgba(142, 117, 110, 0.15);
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: #999999;
+  font-size: 14px;
+}
+
+/*Checkbox*/
+
+.form-check {
+  padding-left: 22px;
+}
+
+.form-check .form-check-input {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  border: 2px solid $color-mocha;
+  cursor: pointer;
+}
+
+.form-check .form-check-input:checked {
+  background-color: $color-mocha;
+  border-color: $color-mocha;
+}
+
+.form-check .form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(142, 117, 110, 0.15);
+}
+
+.form-check .form-check-label {
+  color: #333333;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/*S'identifier btn*/
+
+.login-btn {
+  background-color: $color-mocha;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  background-color: #78635d;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(142, 117, 110, 0.3);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+/*Mot de passe oublié ? + Lien inscription*/
+
+.forgot-password,
+.signup-link {
+  color: $color-mocha;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover,
+.signup-link:hover {
+  color: #6d5a54;
+  text-decoration: underline;
+}
+
+.text-center span {
+  color: $color-text-dark;
+  font-size: 14px;
+}

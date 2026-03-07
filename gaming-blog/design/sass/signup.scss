@@ -1,0 +1,85 @@
+// Import des fichiers communs
+@import "variables";
+@import "mixins";
+@import "styles";
+
+//Sign up
+
+#signup_body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: $color-pink;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 10px;
+}
+
+.signup-box {
+  background-color: $color-white;
+  border-radius: 20px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.signup-title {
+  color: $color-text-dark;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-label {
+  color: $color-text-dark;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  border: 2px solid #d4c1bb;
+  border-radius: 10px;
+  padding: 12px 15px;
+  font-size: 15px;
+  color: $color-text-dark;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: $color-mocha;
+  box-shadow: 0 0 0 0.2rem rgba(142, 117, 110, 0.15);
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: #999999;
+  font-size: 14px;
+}
+
+.signup-btn {
+  background-color: $color-mocha;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $color-white;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.signup-btn:hover {
+  background-color: #78635d;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(142, 117, 110, 0.3);
+}
+
+.signup-btn:active {
+  transform: translateY(0);
+}

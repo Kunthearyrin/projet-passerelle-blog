@@ -1,0 +1,11 @@
+//Footer
+.footer {
+  background-color: darken($color-mocha, 10%);
+  color: $color-white;
+  padding: 2rem 0;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}

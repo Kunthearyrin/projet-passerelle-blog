@@ -1,0 +1,15 @@
+// Mixins
+@mixin transition($property: all, $duration: 0.3s) {
+  transition: $property $duration ease-in-out;
+}
+
+// Mixin pour les ombres
+@mixin shadow($size: medium) {
+  @if $size == small {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  } @else if $size == medium {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  } @else if $size == large {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+}

@@ -1,0 +1,35 @@
+//Header
+.header {
+  background-color: $color-white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .navbar {
+    padding: 1rem 0;
+
+    .navbar-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $color-mocha;
+      @include transition;
+
+      &:hover {
+        color: darken($color-mocha, 10%);
+      }
+    }
+
+    .nav-link {
+      color: $color-text-dark;
+      font-weight: 500;
+      margin-left: 1.5rem;
+      @include transition;
+
+      &:hover,
+      &.active {
+        color: $color-mocha;
+      }
+    }
+  }
+}

@@ -1,0 +1,226 @@
+@import "variables";
+@import "mixins";
+@import "header";
+@import "footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: $color-text-dark;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+//Porfolio
+
+.portfolio {
+  background-color: $color-pink;
+  padding: 80px 0;
+  min-height: 850px;
+  display: flex;
+  align-items: center;
+
+  .portfolio-text {
+    h1 {
+      color: $color-mocha;
+      font-weight: bold;
+      font-size: 2.5rem;
+    }
+
+    p {
+      color: $color-text-dark;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn-custom {
+      background-color: $color-mocha;
+      color: $color-white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      border: none;
+      @include transition;
+
+      &:hover {
+        background-color: darken($color-mocha, 10%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .controller-img {
+    max-width: 500px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+// Articles
+
+.articles {
+  background-color: $color-mocha;
+  padding: 80px 0;
+  min-height: 100vh;
+
+  .section-title {
+    color: $color-white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  .article-card {
+    background-color: $color-white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    @include transition(transform);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .article-thumbnail {
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include transition(transform);
+      }
+    }
+
+    &:hover .article-thumbnail img {
+      transform: scale(1.1);
+    }
+
+    .article-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      .article-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $color-mocha;
+        margin-bottom: 1rem;
+      }
+
+      .article-excerpt {
+        color: $color-text-dark;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+        flex-grow: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .article-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+
+        .article-rating {
+          i {
+            color: $color-star;
+            font-size: 1.1rem;
+            margin-right: 3px;
+          }
+
+          .far {
+            color: lighten($color-text-dark, 40%);
+          }
+        }
+
+        .article-date {
+          color: lighten($color-text-dark, 20%);
+          font-size: 0.9rem;
+        }
+      }
+
+      .btn-read-more {
+        background-color: $color-pink;
+        color: $color-mocha;
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        border: none;
+        width: 100%;
+        text-align: center;
+        @include transition;
+
+        &:hover {
+          background-color: darken($color-pink, 10%);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+}
+
+//Responsive Design
+
+@media (max-width: 991px) {
+  .portfolio {
+    .portfolio-text h1 {
+      font-size: 2rem;
+    }
+
+    .controller-img {
+      max-width: 350px;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .articles .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio {
+    padding: 60px 0;
+
+    .portfolio-text h1 {
+      font-size: 1.75rem;
+    }
+
+    .portfolio-text p {
+      font-size: 1rem;
+    }
+  }
+
+  .articles {
+    padding: 60px 0;
+  }
+}
